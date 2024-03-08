@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway+Dots&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    background-color: rgb(100, 100, 100);
+}
+#form{
+    width: 500px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    color: #F59E0B;
+    background-color: black;
+    border-radius: 8px;
+    font-size: 15px;
+}
+h1{
+    border-bottom: 1px solid #F59E0B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+.form-control input{
+    border:2px solid #F59E0B;
+    border-radius: 5px;
+    background-color: gray;
+    display: block;
+    padding: 12px;
+    width: 100%;
+    font: size 12px; ;
+}
+#form #btn{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+    border-radius: 30px;
+}
+.form-control .error{
+    color: red;
+}
+
+.form-control.success input{
+    border-color: green;
+}
+.form-control.error input{
+    border-color: red;
+}
