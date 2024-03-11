@@ -1,0 +1,53 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 450px;
+  width: 600px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.slider-output {
+  text-align: center;
+}
+
+.input-slider {
+  width: 100%;
+  height: 30px; /* Adjust height as needed */
+}
+
+.input-slider::-webkit-slider-thumb {
+  width: 20px; /* Adjust thumb width */
+  height: 20px; /* Adjust thumb height */
+  background-color: #007bff; /* Adjust thumb color */
+  border-radius: 50%; /*Makes the thumb circular*/
+  cursor: pointer;
+}
+
+.output-section {
+  text-align: center;
+}
+.output {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}

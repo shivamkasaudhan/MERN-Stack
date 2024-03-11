@@ -1,33 +1,63 @@
 import React, { useState } from 'react'
 
 const Form = () => {
-    const[name, setName] = useState("");
-    const[Age, setAge] = useState("");
-    const[Email, setEmail] = useState("");
-    const handleName = (e)=>{
-        setName(e.target.value)
+    // const[name, setName] = useState("");
+    // const[Age, setAge] = useState("");
+    // const[Email, setEmail] = useState("");
+    // const[password, setPass] = useState("");
+
+    const [formData,setFormData] = useState({
+        Name:'',
+        Age: '',
+        Email:'',
+        password:''
+    })
+    const handleInput=(e)=>{
+        const {name,value} = e.target;
+
+        setFormData({
+            ...formData,
+            [name]: value
+        })
     }
-    const handleAge = (e)=>{
-        setAge(e.target.value)
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+
     }
-    const handleEmail = (e)=>{
-        setEmail(e.target.value)
-    }
+    // const handleName = (e)=>{
+    //     setName(e.target.value)
+    // }
+    // const handleAge = (e)=>{
+    //     setAge(e.target.value)
+    // }
+    // const handleEmail = (e)=>{
+    //     setEmail(e.target.value)
+    // }
+    // const handlePass = (e)=>{
+    //     setPass(e.target.value)
+    // }
+    
+    
   return (
-    <div className='form'>
+    <form className='form' onSubmit={handleSubmit}>
         <label >
-            name: 
-            <input type="text" onChange={handleName} value={name} />
+            Name: 
+            <input type="text" name='Name' onChange={handleInput} value={formData.Name} />
         </label>
         <label >
             Age: 
-            <input type="number" onChange={handleAge} value={Age} />
+            <input type="number" name='Age' onChange={handleInput} value={formData.Age} />
         </label>
         <label >
             Email: 
-            <input type="text" onChange={handleEmail} value={Email} />
+            <input type="email" name='Email' onChange={handleInput} value={formData.Email} />
         </label>
-    </div>
+        <label >
+            Password: 
+            <input type="password" name='password' onChange={handleInput} value={formData.password} />
+        </label>
+        <button type='submit'>Submit</button>
+    </form>
   )
 }
 

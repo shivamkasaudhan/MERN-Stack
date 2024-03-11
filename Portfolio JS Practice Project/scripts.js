@@ -19,3 +19,13 @@ var typed = new Typed('#text', {
   const form = document.getElementById("form");
   const userName = document.getElementById("user");
   //12:23
+
+  const threeDots= document.querySelector('.three-dots');
+  const container= document.querySelector('.container');
+  const cut= document.querySelector('.cut');
+  threeDots.addEventListener("click",()=>{
+    container.style.width='30vw';
+  });
+  cut.addEventListener("click",()=>{
+    container.style.width='0'
+  })
